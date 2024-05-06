@@ -24,5 +24,6 @@ public class Fruit {
 
     @NotNull
     @Enumerated(EnumType.STRING)
+    @Column(name = "fruit_type")
     private FruitType fruitType;
 }

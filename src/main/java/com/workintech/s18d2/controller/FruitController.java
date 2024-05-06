@@ -10,7 +10,7 @@ import java.util.List;
 
 @Validated
 @RestController
-@RequestMapping("/fruits")
+@RequestMapping("/fruit")
 public class FruitController {
 
     private final FruitService fruitService;
@@ -40,7 +40,7 @@ public class FruitController {
         return fruitService.save(fruit);
     }
 
-    @PostMapping("/{name}")
+    @GetMapping("/name/{name}")
     public List<Fruit> searchFruitsByName(@PathVariable String name) {
         return fruitService.searchByName(name);
     }
